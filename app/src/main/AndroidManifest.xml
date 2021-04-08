@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.splashscreen">
+    package="com.example.Quantica">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Apptheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".register"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeOverlay.MyApp.DarkSurface"
+            ></activity>
+        <activity
+            android:name=".log_in"
+            android:label="@string/title_activity_log_in"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeOverlay.MyApp.DarkSurface" />
+        <activity
+            android:name=".Main"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

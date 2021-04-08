@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">Quantica</string>
+    <string name="title_activity_log_in">log_in</string>
+
+    <!-- Español -->
+    <string name="iniciar_sesion">Iniciar Sesion</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="titulo_inicio_de_sesion">Bienvenido</string>
+    <string name="subtitulo_inicio_de_sesion">Inicia sesion</string>
+    <string name="usuario">Usuario</string>
+    <string name="correo">Correo electronico</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="repetir_contraseña">repita contraseña</string>
+    <string name="olvidaste_constraseña_part1">¿Olvidaste tu contraseña?</string>
+    <string name="olvidaste_constraseña_part2">recuperala aqui</string>
+    <string name="redirigir_registro_part1">¿No tienes cuenta?</string>
+    <string name="redirigir_registro_part2">registrate aqui</string>
+    <string name="redirigir_iniciar_sesion_part1">¿Ya tienes cuenta?</string>
+    <string name="redirigir_iniciar_sesion_part2">inicia sesion aqui</string>
+    <string name="o">O</string>
+
+    <!-- English -->
+    <string name="log_in">Login</string>
+    <string name="register">Register</string>
+    <string name="login_tittle">Welcome</string>
+    <string name="login_subtitle">Login</string>
+    <string name="user">User</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="confirm_email">Confirm password</string>
+    <string name="forgot_password_part1">Forgot password?</string>
+    <string name="forgot_password_part2">click here</string>
+    <string name="redirect_register_part1">Dont have an account?</string>
+    <string name="redirect_register_part2">sign up here</string>
+    <string name="redirect_login_part1">Already have an account?</string>
+    <string name="redirect_login_part2">log in here</string>
+    <string name="or">Or</string>
+    <!-- Strings used for fragments for navigation -->
+
 </resources>

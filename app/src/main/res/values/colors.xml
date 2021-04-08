@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <!-- Primary Colors -->
+    <color name="pink">#E91E8A</color>
+    <color name="blue">#5040D6</color>
+    <!-- Support Color -->
+    <color name="softpink">#FF66F5</color>
+    <color name="purple">#FF8200EE</color>
+    <color name="yellow">#FAE43A</color>
+    <color name="orange">#FA7E1E</color>
+
+    <!-- Grayscale Colors -->
+    <color name="lightest">#EEEEEE</color>
+    <color name="ligh">#CCCCCC</color>
+    <color name="base">#999999</color>
+    <color name="dark">#666666</color>
+    <color name="darkest">#333333</color>
+
+    <!-- Neutral Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+
 </resources>
