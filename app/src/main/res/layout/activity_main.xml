@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main">
@@ -12,58 +13,67 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-95dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="381dp"
-        android:layout_height="262dp"
-        app:layout_constraintBottom_toTopOf="@+id/log_in_button"
-        app:layout_constraintEnd_toEndOf="@+id/videoView"
-        app:layout_constraintStart_toStartOf="@+id/videoView"
-        app:layout_constraintTop_toTopOf="@+id/videoView"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/quantica_logo_name" />
+        android:layout_width="0dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/Main_layout"
+        app:layout_constraintStart_toStartOf="@+id/Main_layout"
+        app:layout_constraintTop_toTopOf="@+id/Main_layout"
+        app:srcCompat="@drawable/quantica_logo_name"
+        android:contentDescription="@string/logo_description" />
 
     <Button
         android:id="@+id/log_in_button"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="64dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginEnd="112dp"
         android:layout_marginBottom="24dp"
-        android:textSize="20sp"
+        android:paddingLeft="4dp"
         android:paddingTop="8dp"
+        android:paddingRight="4dp"
         android:paddingBottom="8dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-
+        android:textSize="20sp"
         app:backgroundTint="@color/pink"
         app:cornerRadius="8dp"
+        android:text="@string/log_in"
         app:layout_constraintBottom_toTopOf="@+id/register_button"
-        app:layout_constraintEnd_toEndOf="@+id/videoView"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-
-        />
+        app:layout_constraintEnd_toEndOf="@+id/Main_layout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/register_button"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="85dp"
-        android:textSize="20sp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="64dp"
         android:paddingLeft="12dp"
+        android:paddingTop="8dp"
         android:paddingRight="12dp"
-        app:cornerRadius="8dp"
-
+        android:paddingBottom="8dp"
+        android:text="@string/sign_up"
+        android:textSize="20sp"
         app:backgroundTint="@color/blue"
-        app:layout_constraintBottom_toBottomOf="@+id/videoView"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Main_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/videoView" />
-
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Main_layout"
+        app:layout_constraintStart_toStartOf="@+id/Main_layout"
+        tools:ignore="UnknownId" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

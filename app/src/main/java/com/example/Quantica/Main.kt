@@ -39,17 +39,19 @@ class Main : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+
         if (Locale.getDefault().displayLanguage == "español"){
             log_in_Btn.setText(R.string.iniciar_sesion)
             register_Btn.setText(R.string.registrarse)
         }
-
-        if (Locale.getDefault().displayLanguage == "English"){
-            log_in_Btn.setText(R.string.log_in)
-            register_Btn.setText(R.string.register)
+        else{
+            if (Locale.getDefault().displayLanguage == "English" || Locale.getDefault().displayLanguage != "English"){
+                log_in_Btn.setText(R.string.log_in)
+                register_Btn.setText(R.string.sign_up)
+            }
         }
 
-        //Log.d("Idioma", Locale.getDefault().getDisplayLanguage())
     }
     fun playVideo(){
         val  videoView = findViewById<VideoView>(R.id.videoView)

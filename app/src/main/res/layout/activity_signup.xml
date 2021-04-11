@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sign_in_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/animation_gradient"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/BtnReturnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_32"
+                app:tint="#ffffff" />
+
+            <TextView
+                android:id="@+id/RegisterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingVertical="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#ffffff"
+                android:textSize="56sp"
+                android:text="@string/sign_up_title"
+                />
+
+            <TextView
+                android:id="@+id/RegisterSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:paddingRight="10dp"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:text="@string/sign_up_subtitle"
+                />
+
+            <EditText
+                android:id="@+id/editTextUserRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:drawableStart="@drawable/mic_32"
+                android:drawablePadding="10dp"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/lightest"
+                android:hint="@string/user"
+                />
+
+            <EditText
+                android:id="@+id/editTextEmailAddressRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:drawableStart="@drawable/ic_baseline_email_32"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/lightest"
+                android:hint="@string/email"
+                />
+            <EditText
+                android:id="@+id/editTextPasswordRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:drawableStart="@drawable/ic_baseline_lock_32"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/lightest"
+                android:hint="@string/password"
+                />
+            <EditText
+                android:id="@+id/editTextTextPasswordConfirmRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:drawableStart="@drawable/ic_baseline_lock_32"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/lightest"
+                android:hint="@string/confirm_password"
+                />
+            <TextView
+                android:id="@+id/registerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/sing_up_button_design"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="40dp"
+                android:text="@string/sign_up"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tVSendToLoginTextPart1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingRight="8dp"
+                    android:text="@string/redirect_login_part1"
+                    android:gravity="right"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tVSendToLoginTextPart2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp"
+                    android:text="@string/redirect_login_part2"
+                    android:textColor="@color/yellow"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
