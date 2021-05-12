@@ -167,21 +167,21 @@
                     android:layout_width="0dp"
                     android:layout_height="80dp"
                     android:layout_weight="1"
-                    android:src="@drawable/facebook_login_icon" />
+                    android:src="@mipmap/facebook_login_icon" />
 
                 <ImageView
                     android:id="@+id/googleLoginBtn"
                     android:layout_width="0dp"
                     android:layout_height="80dp"
                     android:layout_weight="1"
-                    android:src="@drawable/gmail_login_icon" />
+                    android:src="@mipmap/gmail_login_icon" />
 
                 <ImageView
                     android:id="@+id/twitterLoginBtn"
                     android:layout_width="0dp"
                     android:layout_height="80dp"
                     android:layout_weight="1"
-                    android:src="@drawable/twitter_login_icon" />
+                    android:src="@mipmap/twitter_login_icon" />
 
 
             </LinearLayout>

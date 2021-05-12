@@ -5,8 +5,7 @@
     android:id="@+id/Main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main">
-
+    tools:context=".Activities.Main">
 
     <VideoView
         android:id="@+id/videoView"
@@ -18,7 +17,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        />
 
     <ImageView
         android:id="@+id/imageView"
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="@+id/Main_layout"
         app:layout_constraintStart_toStartOf="@+id/Main_layout"
         app:layout_constraintTop_toTopOf="@+id/Main_layout"
-        app:srcCompat="@drawable/quantica_logo_name"
+        app:srcCompat="@mipmap/quantica_logo_name"
         android:contentDescription="@string/logo_description" />
 
     <Button
