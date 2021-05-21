@@ -1,8 +1,8 @@
 const express = require('express')
 const graphqlHTTP = require('express-graphql').graphqlHTTP;
 const {buildSchema} = require('graphql')
+const crypto = require('crypto');
 const pool = require("./db")
-var bodyParser = require('body-parser')
 
 const app = express();
 app.use(express.json());
@@ -66,17 +66,23 @@ app.get('/messages', function (req, res) {
 app.get('/Users', async function (req, res) {
     list = []
     const email = req.query.email
-    const password = req.query.password
+    const password = crypto.createHash('sha256', req.body.password).update(email).digest('hex')
 
     const userWithEmail = await pool.query("SELECT * FROM users WHERE email = $1",
         [email]
     );
 
-    list[0] = userWithEmail
+    list[0] = user
     console.log(userWithEmail.rows)
     console.log(userWithEmail.rows[0].password)
     if (userWithEmail.rows[0].password == password){
         console.log("we found the user")
+        var user = {
+            "id_user": 0,
+            "email": userWithEmail.rows[0].email,
+            "password" : userWithEmail.rows[0].password,
+            "nickname": null
+        }
         res.status(200).end(JSON.stringify(list))   
     }else{
         console.log("we couldn't find the user")
@@ -101,7 +107,7 @@ app.get('/Users/:email', async function (req, res) {
 // Create a new Users and add it to existing Users list 
 app.post('/user', async function (req, res) {
 	console.log(req.body)
-
+    const passHASH = crypto.createHash('sha256', req.body.password).update(req.body.email).digest('hex')
     try {
         
         const userInfo = await pool.query("SELECT * FROM users WHERE (email = $1) OR (nickname = $2)",
@@ -110,17 +116,17 @@ app.post('/user', async function (req, res) {
         
         //console.log(userWithnick)
         if (userInfo.rowCount == 0 ) {
-            const userParams = [req.body.nickname, req.body.email, req.body.password]
+            const userParams = [req.body.nickname, req.body.email, passHASH]
             const aUser = await pool.query(
                 "INSERT INTO users(nickname, email, password) VALUES ($1, $2, $3)",
                 userParams
             );
 
             var newUser = {
-                "id_user": aUser.id_user,
-                "email": aUser.email,
-                "password" : aUser.password,
-                "nickname": aUser.nickname
+                "id_user": 0,
+                "email": req.body.email,
+                "password" : passHASH,
+                "nickname": req.body.nickname
             }
 
             res.status(201).end(JSON.stringify(newUser));

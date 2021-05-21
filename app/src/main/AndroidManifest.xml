@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.Quantica" >
+    package="com.example.quantica"
+    android:targetSandboxVersion="1">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -14,34 +15,29 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Apptheme" >
+        android:theme="@style/Apptheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.example.quantica.Activities.Profile" />
         <activity
-            android:name=".Home"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Apptheme.NoActionBar" >
-        </activity>
-        <activity android:name=".Activities.Profile" />
-        <activity
-            android:name=".Activities.Main"
+            android:name="com.example.quantica.Activities.Main"
             android:label="@string/title_Main"
-            android:theme="@style/SplashTheme" >
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- recordar cambiar esto a la activiti de home -->
+        <activity android:name="com.example.quantica.Activities.Dashboard"
+            android:label="@string/title_activity_Dashboard"
+            android:screenOrientation="portrait"
+            />
         <activity
-            android:name=".Activities.home"
-            android:label="@string/title_activity_home"
+            android:name="com.example.quantica.Activities.register"
             android:screenOrientation="portrait"
             android:theme="@style/ThemeOverlay.MyApp.DarkSurface" />
         <activity
-            android:name=".Activities.register"
-            android:screenOrientation="portrait"
-            android:theme="@style/ThemeOverlay.MyApp.DarkSurface" />
-        <activity
-            android:name=".Activities.log_in"
+            android:name="com.example.quantica.Activities.log_in"
             android:label="@string/title_activity_log_in"
             android:screenOrientation="portrait"
             android:theme="@style/ThemeOverlay.MyApp.DarkSurface" />

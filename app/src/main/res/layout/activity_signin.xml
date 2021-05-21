@@ -46,27 +46,50 @@
                 android:textSize="24sp"
                 android:text="@string/login_subtitle"
                 />
-
-            <EditText
-                android:id="@+id/editTextEmailAddressLogin"
+            <com.google.android.material.textfield.TextInputLayout
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/etEmailLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/white"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@null"
+                app:errorTextColor="@color/white"
+                app:boxStrokeErrorColor="@color/Warning"
                 android:layout_marginTop="64dp"
-                android:drawableStart="@drawable/ic_baseline_email_32"
-                android:drawablePadding="10dp"
-                android:inputType="textEmailAddress"
-                android:padding="10dp"
-                android:singleLine="true"
-                android:textColor="@color/white"
-                android:textColorHint="@color/lightest"
-                android:hint="@string/email"
-                />
-
+                >
+                <EditText
+                    android:id="@+id/editTextEmailAddressLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:drawableStart="@drawable/ic_baseline_email_32"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/lightest"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/etPasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                android:textColorHint="@color/white"
+                android:layout_marginTop="8dp"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@null"
+                app:errorTextColor="@color/white"
+                app:boxStrokeErrorColor="@color/Warning"
+                >
             <EditText
                 android:id="@+id/editTextPasswordLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/colorTransparent"
                 android:drawableStart="@drawable/ic_baseline_lock_32"
                 android:drawablePadding="10dp"
                 android:padding="10dp"
@@ -74,9 +97,8 @@
                 android:singleLine="true"
                 android:textColor="@color/white"
                 android:textColorHint="@color/lightest"
-                android:hint="@string/password"
                 />
-
+            </com.google.android.material.textfield.TextInputLayout>
             <TextView
                 android:id="@+id/loginBtn"
                 android:layout_width="wrap_content"

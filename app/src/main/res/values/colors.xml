@@ -24,4 +24,7 @@
     <!-- Complementary colors -->
     <color name="softorange">#FAA31E</color>
 
+    <!-- Waning color -->
+    <color name="Warning">#FF0000</color>
+
 </resources>

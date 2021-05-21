@@ -55,8 +55,6 @@
                 android:src="@drawable/ic_baseline_menu_24" />
         </LinearLayout>
 
-
-
         <ScrollView
             android:id="@+id/scrollview"
             android:layout_width="match_parent"
@@ -75,22 +73,6 @@
                     android:paddingHorizontal="120dp"
                     />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CALENDARIO"
-                    android:textStyle="bold"
-                    android:textSize="24sp"
-                    android:elevation="5dp"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="24dp"
-                    android:layout_marginTop="16dp"
-                    android:textColor="#ffffff"
-                    android:background="@drawable/underline"
-                    android:layout_gravity="center"
-                    android:drawablePadding="16dp"
-                    android:drawableRight="@drawable/ic_schedule"
-                    />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -550,7 +532,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintWidth_percent="0.98"
         app:menu="@menu/bottom_navigation_3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
